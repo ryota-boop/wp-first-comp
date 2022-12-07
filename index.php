@@ -36,22 +36,11 @@ Template Name: theme-demo
                     <p>タイトルタイトルタイトルタイトル</p>
                 </div>
             </div>
-            <?php if(have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
-                    <div class="news_topic2">
-                        <div class="news_topic2-1">
-                            <time datetime="2021.01.01"><?php the_date(); ?></time>
-                            <span><?php the_title(); ?></span>
-                        </div>
-                        <p><?php the_title(); ?></p>
-                    </div>
-            <?php endwhile; else : ?>
-                <p>投稿がありません。</p>
-            <?php endif; ?>
+
         </div>
         
         <div class="about" id="about">
-            <div><img src="img/about.jpeg" alt=""></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/img/about.jpeg" alt=""></div>
             <div class="about_text">
                 <h2 class="section_title">
                     <span class="section_topic">ABOUT</span>
@@ -70,24 +59,24 @@ Template Name: theme-demo
                     <div class="business_content-1_left" >
                     <div class="business_list">
                         <p>-&nbsp;&nbsp;Web制作・マーケティング</p>
-                        <div><img src="img/business1.jpg" alt=""></div>
+                        <div><img src="<?php echo get_template_directory_uri(); ?>/img/business1.jpg" alt=""></div>
                     </div>
                     </div>
                     <div class="business_list">
                         <p>-&nbsp;&nbsp;プロモーション企画・制作</p>
-                        <div><img src="img/business2.jpg" alt=""></div>
+                        <div><img src="<?php echo get_template_directory_uri(); ?>/img/business2.jpg" alt=""></div>
                     </div>
                 </div>
                 <div class="business_content-1">
                     <div class="business_content-1_left" >
                     <div class="business_list">
                         <p>-&nbsp;&nbsp;インターネットメディア事業</p>
-                        <div><img src="img/business3.jpg" alt=""></div>
+                        <div><img src="<?php echo get_template_directory_uri(); ?>/img/business3.jpg" alt=""></div>
                     </div>
                     </div>
                     <div class="business_list">
                         <p>-&nbsp;&nbsp;ソーシャル企画・運営</p>
-                        <div><img src="img/business4.jpg" alt=""></div>
+                        <div><img src="<?php echo get_template_directory_uri(); ?>/img/business4.jpg" alt=""></div>
                 </div>
                 </div>
 
@@ -119,7 +108,7 @@ Template Name: theme-demo
                 </div>
                 
             </div>
-            <div><img src="img/company.jpg" alt=""></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/img/company.jpg" alt=""></div>
         </div>
     </main>
 <?php get_footer(); ?>
